@@ -7,9 +7,11 @@ def dict_factory(cursor, row):
     return d
 
 con = sqlite3.connect("atm_databse.db")
+# 三个数据库/表，替换上面db文件可以查看数据库里面的格式
 # atm_databse/atm
 # deposit/record
 # Investment/investment
+
 con.row_factory = dict_factory
 c = con.cursor()
 c.execute("select * from atm ")
