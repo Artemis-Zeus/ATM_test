@@ -10,7 +10,7 @@ import time
 
 ARIAL = ("arial", 10, "bold")
 
-
+#abcd
 class Bank:
     def __init__(self, root):
         self.money = None
