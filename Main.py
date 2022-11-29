@@ -15,6 +15,7 @@ class Bank:
         self.money = None
         self.conn = sqlite3.connect("atm_databse.db", timeout=100)
         self.conn2 = sqlite3.connect("deposit.db", timeout=100)
+        self.conn3 = sqlite3.connect("Investment.db", timeout=100)
         self.login = False
         self.root = root
         self.header = Label(self.root, text="R~R BANK", bg="#50A8B0", fg="white", font=("arial", 20, "bold"))
