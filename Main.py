@@ -1,4 +1,4 @@
-#jeddy 、Sakura加入
+# jeddy 、Sakura、Franklif、Artemis加入
 # Bank ATM
 # created by github.com/rajatbhatia1998
 # Account Number : 10 ------------ Password : trial
@@ -10,7 +10,8 @@ import time
 
 ARIAL = ("arial", 10, "bold")
 
-#abcd
+
+# abcd
 class Bank:
     def __init__(self, root):
         self.money = None
@@ -139,7 +140,8 @@ class Bank:
             self.conn.execute("update atm set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
             self.conn.commit()
             self.conn2.execute("INSERT INTO record(f_id,s_id,money,bill_no) VALUES(?,?,?,?)",
-                               (self.ac, int(self.target_account.get()), int(self.money_box.get()), str(time.time()).replace(".", "-")))
+                               (self.ac, int(self.target_account.get()), int(self.money_box.get()),
+                                str(time.time()).replace(".", "-")))
             self.conn2.commit()
 
         elif int(self.money_box.get()) < 0:
