@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="db已建立&#10;目前可用db为ATM.db,其中格式于create.py有列出">
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容">
+      <change beforePath="$PROJECT_DIR$/create.py" beforeDir="false" afterPath="$PROJECT_DIR$/create.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +173,7 @@
       <workItem from="1669734297940" duration="1301000" />
       <workItem from="1669805481976" duration="773000" />
       <workItem from="1669815851089" duration="1316000" />
-      <workItem from="1669821733440" duration="3007000" />
+      <workItem from="1669821733440" duration="3538000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669627893933</created>
@@ -217,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669824570846</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容">
+      <created>1669825038526</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669825038526</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,10 +247,11 @@
     <MESSAGE value="加入人员变更（4人）" />
     <MESSAGE value="db稍微修改" />
     <MESSAGE value="db已建立&#10;目前可用db为ATM.db,其中格式于create.py有列出" />
-    <option name="LAST_COMMIT_MESSAGE" value="db已建立&#10;目前可用db为ATM.db,其中格式于create.py有列出" />
+    <MESSAGE value="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ATM_test$test.coverage" NAME="test 覆盖结果" MODIFIED="1669823105018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$test.coverage" NAME="test 覆盖结果" MODIFIED="1669824913555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ATM_test$create.coverage" NAME="create 覆盖结果" MODIFIED="1669824004599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ATM_test$Main.coverage" NAME="Main 覆盖结果" MODIFIED="1669816528112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
