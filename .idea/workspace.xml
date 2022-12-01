@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容">
-      <change beforePath="$PROJECT_DIR$/create.py" beforeDir="false" afterPath="$PROJECT_DIR$/create.py" afterDir="false" />
+    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="pass">
+      <change afterPath="$PROJECT_DIR$/use_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATM.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Investment.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atm_databse.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deposit.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,15 +47,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.test">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Banking_Project-ATM--master" />
@@ -173,7 +179,8 @@
       <workItem from="1669734297940" duration="1301000" />
       <workItem from="1669805481976" duration="773000" />
       <workItem from="1669815851089" duration="1316000" />
-      <workItem from="1669821733440" duration="3538000" />
+      <workItem from="1669821733440" duration="4465000" />
+      <workItem from="1669874822635" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669627893933</created>
@@ -224,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669825038526</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pass">
+      <created>1669825308117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669825308117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,11 +262,12 @@
     <MESSAGE value="db稍微修改" />
     <MESSAGE value="db已建立&#10;目前可用db为ATM.db,其中格式于create.py有列出" />
     <MESSAGE value="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容" />
+    <MESSAGE value="pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="pass" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ATM_test$test.coverage" NAME="test 覆盖结果" MODIFIED="1669824913555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$test.coverage" NAME="test 覆盖结果" MODIFIED="1669876506211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ATM_test$create.coverage" NAME="create 覆盖结果" MODIFIED="1669824004599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ATM_test$Main.coverage" NAME="Main 覆盖结果" MODIFIED="1669816528112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$Main.coverage" NAME="Main 覆盖结果" MODIFIED="1669876477294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -15,9 +15,7 @@ ARIAL = ("arial", 10, "bold")
 class Bank:
     def __init__(self, root):
         self.money = None
-        self.conn = sqlite3.connect("atm_databse.db", timeout=100)
-        self.conn2 = sqlite3.connect("deposit.db", timeout=100)
-        self.conn3 = sqlite3.connect("Investment.db", timeout=100)
+        self.conn = sqlite3.connect("ATM.db", timeout=100)
         self.login = False
         self.root = root
         self.header = Label(self.root, text="R~R BANK", bg="#50A8B0", fg="white", font=("arial", 20, "bold"))
@@ -45,18 +43,17 @@ class Bank:
 
     def database_fetch(self):  # Fetching Account data from database
         self.acc_list = []
-        self.temp = self.conn.execute("select name,pass,acc_no,acc_type,bal from atm where acc_no = ? ", (self.ac,))
+        self.temp = self.conn.execute("select name,pw,acc_no,bal from account where acc_no = ? ", (self.ac,))
         for i in self.temp:
-            self.money = i[4]
+            self.money = i[3]
             self.acc_list.append("Name = {}".format(i[0]))
             self.acc_list.append("Account no = {}".format(i[2]))
-            self.acc_list.append("Account type = {}".format(i[3]))
             self.ac = i[2]
-            self.acc_list.append("Balance = {}".format(i[4]))
+            self.acc_list.append("Balance = {}".format(i[3]))
 
     def verify(self):  # verifying of authorised user
         ac = False
-        self.temp = self.conn.execute("select name,pass,acc_no,acc_type,bal from atm where acc_no = ? ",
+        self.temp = self.conn.execute("select name,pw,acc_no,bal from account where acc_no = ? ",
                                       (int(self.uentry.get()),))
         for i in self.temp:
             self.ac = i[2]
@@ -113,7 +110,7 @@ class Bank:
 
     def Balance(self):
         self.database_fetch()
-        self.label = Label(self.frame, text="\n\n" + self.acc_list[3], font=ARIAL)
+        self.label = Label(self.frame, text="\n\n" + self.acc_list[2], font=ARIAL)
         self.label.place(x=250, y=50, width=300, height=200)
 
     def transfer(self):
@@ -137,12 +134,12 @@ class Bank:
         if self.money >= int(self.money_box.get()) >= 0:
             self.label = Label(self.frame, text="Transaction Completed !", font=ARIAL)
             self.label.place(x=250, y=50, width=300, height=200)
-            self.conn.execute("update atm set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
+            self.conn.execute("update account set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
             self.conn.commit()
-            self.conn2.execute("INSERT INTO record(f_id,s_id,money,bill_no) VALUES(?,?,?,?)",
+            self.conn.execute("INSERT INTO record(f_id,s_id,money,bill_no) VALUES(?,?,?,?)",
                                (self.ac, int(self.target_account.get()), int(self.money_box.get()),
                                 str(time.time()).replace(".", "-")))
-            self.conn2.commit()
+            self.conn.commit()
 
         elif int(self.money_box.get()) < 0:
             self.label = Label(self.frame, text="Transaction False!\n The transfer amount should be greater than 0!",
@@ -173,7 +170,7 @@ class Bank:
         if int(self.money_box.get()) >= 0:
             self.label = Label(self.frame, text="Transaction Completed !", font=ARIAL)
             self.label.place(x=250, y=50, width=300, height=200)
-            self.conn.execute("update atm set bal = bal + ? where acc_no = ?", (self.money_box.get(), self.ac))
+            self.conn.execute("update account set bal = bal + ? where acc_no = ?", (self.money_box.get(), self.ac))
             self.conn.commit()
         else:
             self.label = Label(self.frame, text="Transaction False!\n The deposit amount should be greater than 0",
@@ -200,7 +197,7 @@ class Bank:
         elif int(self.money_box.get()) <= self.money:
             self.label = Label(self.frame, text="Money Withdrawl !", font=ARIAL)
             self.label.place(x=250, y=50, width=300, height=200)
-            self.conn.execute("update atm set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
+            self.conn.execute("update account set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
             self.conn.commit()
 
         else:
