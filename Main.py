@@ -7,7 +7,9 @@ from tkinter import messagebox
 import sqlite3
 import time
 from tkinter import ttk
+
 ARIAL = ("arial", 10, "bold")
+
 
 class Bank:
     def __init__(self, root):
@@ -110,8 +112,8 @@ class Bank:
 
     def MainMenu(self):  # Main App Appears after logined !
         self.frame = Frame(self.root, bg="#728B8E", width=800, height=400)
+        root.title("User Interface")
         root.geometry("800x400")
-
 
         self.detail = Button(self.frame, text="Account Details", bg="#50A8B0", fg="white", font=ARIAL,
                              command=self.account_detail)
@@ -123,10 +125,10 @@ class Bank:
                               command=self.Balance)
         self.deposit = Button(self.frame, text="Deposit Money", bg="#50A8B0", fg="white", font=ARIAL,
                               command=self.deposit_money)
-        self.withdrawl = Button(self.frame, text="Withdrawl Money", bg="#50A8B0", fg="white", font=ARIAL,
-                                command=self.withdrawl_money)
+        self.withdrawl = Button(self.frame, text="Withdraw Money", bg="#50A8B0", fg="white", font=ARIAL,
+                                command=self.withdraw_money)
         self.history_button = Button(self.frame, text="CHECK RECORDS", bg="#50A8B0", fg="white", font=ARIAL,
-                                   command=self.history)
+                                     command=self.history)
         self.q = Button(self.frame, text="Quit", bg="#50A8B0", fg="white", font=ARIAL, command=self.root.destroy)
 
         self.detail.place(x=0, y=0, width=200, height=50)
@@ -138,9 +140,7 @@ class Bank:
         self.withdrawl.place(x=600, y=315, width=200, height=50)
         self.q.place(x=340, y=340, width=120, height=20)
         self.frame.pack()
-    def clear(self):
-        for i in self.frame.winfo_children():
-            i.destroy()
+
     def account_detail(self):
         self.database_fetch()
         text = "\n\n\n" + self.acc_list[0] + "\n" + self.acc_list[1] + "\n" + self.acc_list[2]
@@ -150,13 +150,15 @@ class Bank:
     def Balance(self):
         self.database_fetch()
         self.label = Label(self.frame, text="\n\n" + self.acc_list[2], font=ARIAL)
-        self.label.place(x=220, y=70, width=360, height=200)
+        self.label.place(x=220, y=50, width=360, height=200)
 
     def transfer(self):
         self.database_fetch()
         print(self.ac)
-        Label(self.frame, text="Target Account:").place(x=220, y=50, width=100, height=20)
-        Label(self.frame, text="Transfer Amount:").place(x=220, y=100, width=100, height=20)
+        self.label = Label(self.frame)
+        self.label.place(x=220, y=50, width=360, height=200)
+        Label(self.frame, text="Target Account:", font=ARIAL).place(x=220, y=70, width=360, height=20)
+        Label(self.frame, text="Transfer Amount:", font=ARIAL).place(x=220, y=130, width=360, height=20)
         self.target_account = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
                                     highlightthickness=2,
                                     highlightbackground="white")
@@ -164,79 +166,75 @@ class Bank:
                                highlightthickness=2,
                                highlightbackground="white")
         self.submitButton = Button(self.frame, text="Submit", bg="#50A8B0", fg="white", font=ARIAL)
-        self.target_account.place(x=220, y=70, width=200, height=20)
-        self.money_box.place(x=220, y=120, width=200, height=20)
-        self.submitButton.place(x=420, y=120, width=55, height=20)
+        self.target_account.place(x=300, y=90, width=200, height=20)
+        self.money_box.place(x=300, y=150, width=200, height=20)
+        self.submitButton.place(x=360, y=200, width=80, height=20)
         self.submitButton.bind("<Button-1>", self.transfer_trans)
 
     def transfer_trans(self, flag):
         if self.money >= int(self.money_box.get()) >= 0:
             self.label = Label(self.frame, text="Transaction Completed !", font=ARIAL)
-            self.label.place(x=220, y=70, width=360, height=200)
+            self.label.place(x=220, y=50, width=360, height=200)
             self.conn.execute("update account set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
             self.conn.commit()
             self.conn.execute("INSERT INTO record(f_id,s_id,money,bill_no) VALUES(?,?,?,?)",
-                               (self.ac, int(self.target_account.get()), int(self.money_box.get()),
-                                str(time.time()).replace(".", "-")))
+                              (self.ac, int(self.target_account.get()), int(self.money_box.get()),
+                               str(time.time()).replace(".", "-")))
             self.conn.commit()
 
         elif int(self.money_box.get()) < 0:
             self.label = Label(self.frame, text="Transaction False!\n The transfer amount should be greater than 0!",
                                font=ARIAL)
-            self.label.place(x=220, y=70, width=360, height=200)
+            self.label.place(x=220, y=50, width=360, height=200)
         else:
             self.label = Label(self.frame, text="Insufficient Balance!",
                                font=ARIAL)
-            self.label.place(x=220, y=70, width=360, height=200)
+            self.label.place(x=220, y=50, width=360, height=200)
 
     def history(self):
         self.database_fetch()
         c = self.conn.cursor()
-        c.execute("select * from record")
+        c.execute("select * from record where f_id={} OR s_id={}".format(self.ac, self.ac))
         output = c.fetchall()
-        print(output)
         heads = ["f_id", "s_id", 'money', 'type', 'withdraw']
         self.tree = ttk.Treeview(self.frame, show='headings')
         self.tree["columns"] = ("f_id", "s_id", 'money', 'type', 'bill_no')  # #定义列
         self.tree.column("f_id", width=40)  # #设置列
-        self.tree.column("s_id", width=40)
+        self.tree.column("s_id", width=50)
         self.tree.column('money', width=60)
-        self.tree.column("type", width=60)
-        self.tree.column("bill_no", width=140)
-        self.tree.heading("f_id", text="发款人")  # #设置显示的表头名
-        self.tree.heading("s_id", text="收款人")
-        self.tree.heading("money", text="金额")
-        self.tree.heading("type", text="类型")
-        self.tree.heading("bill_no", text="订单号")
+        self.tree.column("type", width=80)
+        self.tree.column("bill_no", width=130)
+        self.tree.heading("f_id", text="Send.")  # #设置显示的表头名
+        self.tree.heading("s_id", text="Rec.")  # Recipient
+        self.tree.heading("money", text="Amount")
+        self.tree.heading("type", text="Type")
+        self.tree.heading("bill_no", text="Bill No.")
         for i in range(len(output)):
-            print(output[i], type(output[i]), type(output[i][0]))
             self.tree.insert("", i, text=" ", values=output[i])
-        self.tree.place(x=220, y=70, width=360, height=200)
+        self.tree.place(x=220, y=50, width=360, height=200)
+
     def investment(self):
         pass
 
     def deposit_money(self):
-        self.money_box = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
-                               highlightthickness=2,
-                               highlightbackground="white")
-        self.submitButton = Button(self.frame, text="Submit", bg="#50A8B0", fg="white", font=ARIAL)
-
-        self.money_box.place(x=220, y=100, width=200, height=20)
-        self.submitButton.place(x=420, y=100, width=55, height=20)
-        self.submitButton.bind("<Button-1>", self.deposit_trans)
+        temp=self.withdraw_deposit()
+        temp.bind("<Button-1>", self.deposit_trans)
 
     def deposit_trans(self, flag):
         if int(self.money_box.get()) >= 0:
+            self.label = Label(self.frame)
+            self.label.place(x=220, y=50, width=360, height=200)
             self.label = Label(self.frame, text="Transaction Completed !", font=ARIAL)
-            self.label.place(x=220, y=70, width=360, height=200)
+            self.label.place(x=220, y=50, width=360, height=200)
             self.conn.execute("update account set bal = bal + ? where acc_no = ?", (self.money_box.get(), self.ac))
+            self.conn.execute("INSERT INTO record(f_id,  money, type, bill_no) VALUES(?,?,?,?)", (self.ac, self.money_box.get(), "Withdraw",str(time.time()).replace(".", "-")))
             self.conn.commit()
         else:
             self.label = Label(self.frame, text="Transaction False!\n The deposit amount should be greater than 0",
                                font=ARIAL)
-            self.label.place(x=220, y=70, width=360, height=200)
+            self.label.place(x=220, y=50, width=360, height=200)
 
-    def withdrawl_money(self):
+    def withdraw_deposit(self):
         self.money_box = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
                                highlightthickness=2,
                                highlightbackground="white")
@@ -244,9 +242,15 @@ class Bank:
 
         self.money_box.place(x=220, y=100, width=200, height=20)
         self.submitButton.place(x=420, y=100, width=55, height=20)
-        self.submitButton.bind("<Button-1>", self.withdrawl_trans)
+        return self.submitButton
 
-    def withdrawl_trans(self, flag):
+    def withdraw_money(self):
+        temp=self.withdraw_deposit()
+        temp.bind("<Button-1>", self.withdraw_trans)
+
+    def withdraw_trans(self, flag):
+        self.label = Label(self.frame)
+        self.label.place(x=220, y=50, width=360, height=200)
         self.database_fetch()
         if int(self.money_box.get()) < 0:
             self.label = Label(self.frame, text="The withdrawal amount cannot be less than 0!",
@@ -257,12 +261,14 @@ class Bank:
             self.label = Label(self.frame, text="Money Withdrawl !", font=ARIAL)
             self.label.place(x=220, y=70, width=360, height=200)
             self.conn.execute("update account set bal = bal - ? where acc_no = ?", (self.money_box.get(), self.ac))
+            self.conn.execute("INSERT INTO record(f_id,  money, type, bill_no) VALUES(?,?,?,?)", (self.ac, self.money_box.get(), "Withdraw",str(time.time()).replace(".", "-")))
             self.conn.commit()
 
         else:
             self.label = Label(self.frame, text="Insufficient Balance!",
                                font=ARIAL)
             self.label.place(x=220, y=70, width=360, height=200)
+
 
 root = Tk()
 root.title("Sign In")
@@ -271,4 +277,3 @@ icon = PhotoImage(file="icon.png")
 root.tk.call("wm", 'iconphoto', root._w, icon)
 obj = Bank(root)
 root.mainloop()
-
