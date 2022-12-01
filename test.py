@@ -1,5 +1,5 @@
 import sqlite3
-
+# 查看数据库结构
 
 def dict_factory(cursor, row):
     d = {}
@@ -10,10 +10,6 @@ def dict_factory(cursor, row):
 
 list1 = ["account", "record", "investment"]
 con = sqlite3.connect("ATM.db")
-# 三个数据库/表，替换上面db文件可以查看数据库里面的格式
-# atm_databse/atm
-# deposit/record
-# Investment/investment
 
 con.row_factory = dict_factory
 c = con.cursor()
