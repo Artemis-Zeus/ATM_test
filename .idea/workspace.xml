@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="">
+    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="加入人员变更（4人）">
       <change beforePath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATM.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/use_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,37 +35,60 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="recomoonmoon &lt;1125624537@11.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2I7axg76IQL6zN6pfQNziU0Wgb7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Python.Main">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python.test1">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Banking_Project-ATM--master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\10558\anaconda3\envs\PyTorch\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Banking_Project-ATM--master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\10558\AppData\Local\Programs\Python\Python310\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/anaconda3/envs/PyTorch/Lib/tkinter" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/anaconda3/envs/PyTorch/Lib/tkinter/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -95,9 +102,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Anaconda\envs\Py Project\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -110,18 +117,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Banking_Project-ATM--master" />
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Anaconda\envs\Py Project\python.exe" />
+      <option name="SDK_HOME" value="E:\Anaconda\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
@@ -133,17 +140,17 @@
       <method v="2" />
     </configuration>
     <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Banking_Project-ATM--master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\10558\anaconda3\envs\PyTorch\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test1.py" />
       <option name="PARAMETERS" value="" />
@@ -156,17 +163,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.Main" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.__init__" />
       <item itemvalue="Python.create" />
+      <item itemvalue="Python.test" />
       <item itemvalue="Python.test1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python.create" />
+        <item itemvalue="Python.test1" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.test1" />
+        <item itemvalue="Python.create" />
       </list>
     </recent_temporary>
   </component>
@@ -187,10 +195,7 @@
       <workItem from="1669704602996" duration="300000" />
       <workItem from="1669732096305" duration="328000" />
       <workItem from="1669734297940" duration="1301000" />
-      <workItem from="1669805481976" duration="773000" />
-      <workItem from="1669815851089" duration="1316000" />
-      <workItem from="1669821733440" duration="4465000" />
-      <workItem from="1669874822635" duration="4755000" />
+      <workItem from="1669805481976" duration="686000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669627893933</created>
@@ -220,49 +225,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669734422634</updated>
     </task>
-    <task id="LOCAL-00005" summary="db稍微修改">
-      <created>1669807449816</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1669807449816</updated>
-    </task>
-    <task id="LOCAL-00006" summary="db已建立&#10;目前可用db为ATM.db,其中格式于create.py有列出">
-      <created>1669824570846</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1669824570846</updated>
-    </task>
-    <task id="LOCAL-00007" summary="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容">
-      <created>1669825038526</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1669825038526</updated>
-    </task>
-    <task id="LOCAL-00008" summary="pass">
-      <created>1669825308117</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1669825308117</updated>
-    </task>
-    <task id="LOCAL-00009" summary="pass">
-      <created>1669876797017</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1669876797017</updated>
-    </task>
-    <task id="LOCAL-00010" summary="commit by franklif&#10;删掉原来注释">
-      <created>1669883022279</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1669883022279</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,35 +241,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="加入人员变更（4人）" />
-    <MESSAGE value="db稍微修改" />
-    <MESSAGE value="db已建立&#10;目前可用db为ATM.db,其中格式于create.py有列出" />
-    <MESSAGE value="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容" />
-    <MESSAGE value="pass" />
-    <MESSAGE value="commit by franklif&#10;删掉原来注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit by franklif&#10;删掉原来注释" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="488" y="235" key="#Notifications" timestamp="1669905567913">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="488" y="235" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1669905567913" />
-    <state x="367" y="0" key="CommitChangelistDialog2" timestamp="1669905714978">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="367" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1669905714978" />
-    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1669905571810">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1669905571810" />
-    <state x="529" y="124" key="git4idea.branch.GitSmartOperationDialog" timestamp="1669904802086">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="529" y="124" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1669904802086" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入人员变更（4人）" />
   </component>
 </project>

@@ -27,18 +27,52 @@ class Bank:
         self.pentry = Entry(self.frame, bg="honeydew", show="*", highlightcolor="#50A8B0",
                             highlightthickness=2,
                             highlightbackground="white")
-
+        self.button1 = Button(self.frame, text="REGISITER", bg="#50A8B0", fg="white", font=ARIAL, command=self.regisiter)
         self.button = Button(self.frame, text="LOGIN", bg="#50A8B0", fg="white", font=ARIAL, command=self.verify)
         self.q = Button(self.frame, text="Quit", bg="#50A8B0", fg="white", font=ARIAL, command=self.root.destroy)
         self.userlabel.place(x=145, y=100, width=120, height=20)
         self.uentry.place(x=153, y=130, width=200, height=20)
         self.plabel.place(x=125, y=160, width=120, height=20)
         self.pentry.place(x=153, y=190, width=200, height=20)
+        self.button1.place(x=155,y=250,width=120,height=20)
         self.button.place(x=155, y=230, width=120, height=20)
         self.q.place(x=480, y=360, width=120, height=20)
 
         self.frame.pack()
 
+    def regisiter(self):
+        # self.frame = Frame(self.root, bg="#728B8E", width=800, height=400)
+        # root.geometry("800x400")
+
+        def regisiter1():
+            a=self.uentry.get()
+            b=self.pentry.get()
+
+            self.conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
+                         VALUES (?,123,0,? )", (a, b))
+            self.conn.commit()
+            messagebox._show("sucessful")#这里加一个成功提示
+        self.button3 = Button(self.frame, text="ok", bg="#50A8B0", fg="white", font=ARIAL, command=regisiter1)
+        self.button3.place(x=155, y=230, width=120, height=40)
+
+
+
+
+
+
+        # self.frame.pack()
+
+        #self.label=Lable
+        # count_name = E1.get()
+        # count_password = (E2.get())
+        # print(count_name)
+        # print(count_password)
+        # print(type(count_name))
+        # print(type(count_password))
+        #
+        # conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
+        #             VALUES (?,11,0,? )", (count_name, count_password))
+        # conn.commit()
     def database_fetch(self):  # Fetching Account data from database
         self.acc_list = []
         self.temp = self.conn.execute("select name,pw,acc_no,bal from account where acc_no = ? ", (self.ac,))
