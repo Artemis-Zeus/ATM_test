@@ -1,6 +1,5 @@
 # jeddy 、Sakura、Franklif、Artemis、Xylophone、jyf、recomoonmoon加入
 # Bank ATM
-# created by github.com/rajatbhatia1998
 # Account Number : 10 ------------ Password : trial
 
 from tkinter import *
@@ -205,7 +204,6 @@ class Bank:
                                font=ARIAL)
             self.label.place(x=250, y=50, width=300, height=200)
 
-
 root = Tk()
 root.title("Sign In")
 root.geometry("600x420")
@@ -214,4 +212,3 @@ root.tk.call("wm", 'iconphoto', root._w, icon)
 obj = Bank(root)
 root.mainloop()
 
-'''If you like this project give a star ,,,,,,Thanks !'''
