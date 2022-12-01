@@ -212,13 +212,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.show_db" />
       <item itemvalue="Python.Main" />
-      <item itemvalue="Python.show_db (1)" />
-      <item itemvalue="Python.test (1)" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.create" />
+      <item itemvalue="Python.show_db (1)" />
+      <item itemvalue="Python.show_db" />
+      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.test1" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
