@@ -10,7 +10,3 @@ record
 {'f_id': 1, 's_id': 2, 'money': 100, 'type': 'transfer', 'bill_no': '1669544906-4822485'}
 {'f_id': 2, 's_id': None, 'money': 100, 'type': 'withdraw', 'bill_no': '1669544907-483701'}
 {'f_id': 1, 's_id': None, 'money': 200, 'type': 'Deposit', 'bill_no': '1669544909-486321'}
-investment
-{'id': 1, 't': 1, 'rate': 1.2, 'money': 1000}
-{'id': 2, 't': 2, 'rate': 1.4, 'money': 1200}
-{'id': 10, 't': 3, 'rate': 1.6, 'money': 2500}

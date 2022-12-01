@@ -23,13 +23,6 @@ def create():
     cur.execute("INSERT INTO account(name,acc_no,bal,pw) VALUES(?,?,?,?)", ("Sakura", 3, 3500,"Sakura" ))
     cur.execute("INSERT INTO account(name,acc_no,bal,pw) VALUES(?,?,?,?)", ("Sakura", 10, 1700,"Sakura" ))
 
-    cur.execute("CREATE TABLE investment(id INT, t INT, rate FLOAT, money INT)")
-    cur.execute("INSERT INTO investment(id,t,rate,money) VALUES(?,?,?,?)", (1, 1, 1.2, 1000))
-    time.sleep(2)
-    cur.execute("INSERT INTO investment(id,t,rate,money) VALUES(?,?,?,?)", (2, 2, 1.4, 1200))
-    time.sleep(2)
-    cur.execute("INSERT INTO investment(id,t,rate,money) VALUES(?,?,?,?)", (10, 3, 1.6, 2500))
-
     cur.execute("CREATE TABLE record(f_id INT, s_id INT, money INT, type TEXT, bill_no TEXT)")
     cur.execute("INSERT INTO record(f_id, s_id,money, type, bill_no) VALUES(?,?,?,?,?)", (1, 2, 100, "transfer","1669544906-4822485"))
     cur.execute("INSERT INTO record(f_id, money, type, bill_no) VALUES(?,?,?,?)", (2,  100, "withdraw","1669544907-483701"))

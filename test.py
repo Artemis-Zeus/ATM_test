@@ -8,7 +8,7 @@ def dict_factory(cursor, row):
     return d
 
 
-list1 = ["account", "record", "investment"]
+list1 = ["account", "record"]
 con = sqlite3.connect("ATM.db")
 
 con.row_factory = dict_factory
