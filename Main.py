@@ -43,15 +43,16 @@ class Bank:
     def regisiter(self):
         # self.frame = Frame(self.root, bg="#728B8E", width=800, height=400)
         # root.geometry("800x400")
-
+        #self.userlabel = Label(self.frame, text="Account Name", bg="#728B8E", fg="white", font=ARIAL)#这里重构一下文字
         def regisiter1():
             a=self.uentry.get()
             b=self.pentry.get()
+            print(a)
 
-            self.conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
-                         VALUES (?,123,0,? )", (a, b))
-            self.conn.commit()
-            messagebox._show("sucessful")#这里加一个成功提示
+            # self.conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
+            #              VALUES (?,123,0,? )", (a, b))
+            # self.conn.commit()
+            # messagebox._show("sucessful")#这里加一个成功提示
         self.button3 = Button(self.frame, text="ok", bg="#50A8B0", fg="white", font=ARIAL, command=regisiter1)
         self.button3.place(x=155, y=230, width=120, height=40)
 

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="加入人员变更（4人）">
-      <change beforePath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="加入人员变更（6人）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATM.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +51,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.test1">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Banking_Project-ATM--master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +78,9 @@
       <module name="Banking_Project-ATM--master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="C:\Users\10558\AppData\Local\Programs\Python\Python310\python.exe" />
       <option name="WORKING_DIRECTORY" value="$USER_HOME$/anaconda3/envs/PyTorch/Lib/tkinter" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -165,8 +165,8 @@
       <item itemvalue="Python.Main" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.create" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.test1" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
@@ -225,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669734422634</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="加入人员变更（6人）">
+      <created>1669914743901</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669914743901</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +252,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="加入人员变更（4人）" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入人员变更（4人）" />
+    <MESSAGE value="加入人员变更（6人）" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入人员变更（6人）" />
   </component>
 </project>
