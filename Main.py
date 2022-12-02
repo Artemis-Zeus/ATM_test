@@ -154,7 +154,98 @@ class Bank:
         pass
 
     def investment(self):
-        pass
+        self.database_fetch()
+        Label(self.frame, text="financial product:").place(x=320, y=25, width=150, height=20)
+
+        Label(self.frame, text="Investment product:1；time:1.2；money:1000").place(x=250, y=50, width=295, height=20)
+        Label(self.frame, text="Investment product:2；time:1.4；money:1200").place(x=250, y=70, width=295, height=20)
+        Label(self.frame, text="Investment product:3；time:1.6；money:2500").place(x=250, y=90, width=295, height=20)
+        self.money_input1 = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
+                                  highlightthickness=2,
+                                  highlightbackground="white")
+        self.money_input1.place(x=545, y=50, width=55, height=20)
+        self.money_input2 = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
+                                  highlightthickness=2,
+                                  highlightbackground="white")
+        self.money_input2.place(x=545, y=70, width=55, height=20)
+        self.money_input3 = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
+                                  highlightthickness=2,
+                                  highlightbackground="white")
+        self.money_input3.place(x=545, y=90, width=55, height=20)
+        self.submitButton = Button(self.frame, text="Submit", bg="#50A8B0", fg="white", font=ARIAL)
+        self.submitButton.place(x=445, y=115, width=55, height=20)
+        self.submitButton.bind("<Button-1>", self.investment_trans)  # execute investment_trans
+
+    def investment_trans(self, flag):
+        top = Toplevel(width=400, height=400)
+        top.title('investment')
+        invertment_list = [{'id': 1, 't': 1, 'rate': 1.2, 'money': 1000}, {'id': 2, 't': 2, 'rate': 1.4, 'money': 1200},
+                           {'id': 3, 't': 3, 'rate': 1.6, 'money': 2500}]
+        terminal = []  # Store of investment product information purchased by users
+        x = self.money_input1.get()
+        if x == '':
+            x = 0
+        else:
+            x = int(x)
+        s = self.money_input2.get()
+        if s == '':
+            s = 0
+        else:
+            s = int(s)
+        l = self.money_input3.get()
+        if l == '':
+            l = 0
+        else:
+            l = int(l)
+        if x >= 0 and s >= 0 and l >= 0:
+            payment = x * 1000 + s * 1200 + l * 2500  # total price
+            if self.money >= payment > 0:
+                if x > 0:
+                    time = x
+                    money_ = 1000 * x
+                    terminal.append({'id': 1, 't': time, 'rate': 1.2, 'money': money_})
+                elif s > 0:
+                    time = s
+                    money_ = 1200 * s
+                    terminal.append({'id': 2, 't': time, 'rate': 1.4, 'money': money_})
+                elif l > 0:
+                    time = l
+                    money_ = 2500 * l
+                    terminal.append({'id': 3, 't': time, 'rate': 1.6, 'money': money_})
+                self.label = Label(top, text="Purchase completed!", font=ARIAL)
+                self.label.place(x=120, y=80, width=150, height=200)
+                self.label = Label(top, text="Investment product you have:", font=ARIAL)
+                self.label.place(x=120, y=110, width=150, height=200)
+
+                tree = ttk.Treeview(top)  # #创建表格对象
+                tree["columns"] = ("id", "time", "rate", "money")  # 定义列:理财产品，持有年限，年利率，购买的金额
+                tree.column("id", width=70)  # #设置列
+                tree.column("time", width=70)
+                tree.column("rate", width=70)
+                tree.column("money", width=70)
+                tree.heading("id", text="id")  # #设置显示的表头名
+                tree.heading("time", text="time")
+                tree.heading("rate", text="rate")
+                tree.heading("money", text="money")
+
+                for i in terminal:
+                    counter = 0
+                    tree.insert("", counter, text="line1",
+                                values=(i.get('id'), i.get('t'), i.get('rate'), i.get('money')))  # #给第0行添加数据，索引值可重复
+                    counter += 1
+                tree.pack()
+
+                self.conn.execute("update account set bal = bal - ? where acc_no = ?", (payment, self.ac))
+                self.conn.commit()
+            elif self.money <= 0:
+                self.label = Label(top, text="There is no balance in your account!", font=ARIAL)
+                self.label.place(x=100, y=100, width=240, height=200)
+            elif self.money < payment:
+                self.label = Label(top, text="Insufficient account balance!", font=ARIAL)
+                self.label.place(x=100, y=100, width=200, height=200)
+        else:
+            self.label = Label(top, text="Incorrect input of investment prduct shares!", font=ARIAL)
+            self.label.place(x=100, y=100, width=250, height=200)
 
     def deposit_money(self):
         self.money_box = Entry(self.frame, bg="honeydew", highlightcolor="#50A8B0",
