@@ -3,13 +3,15 @@ import time
 import random
 
 # 在内存中创建数据库
-db_name="ATM.db"
+db_name = "ATM.db"
 con = sqlite3.connect(db_name)
 
 # 特别注意
 # {'name': 'Demo', 'acc_no': 10, 'acc_type': 'savings', 'bal': 988, 'pass': 'trial'} ->{'name': 'Demo', 'acc_no': 10, 'bal': 988, 'pass': 'trial'}
 
 cur = con.cursor()
+
+
 # account: name | acc_no | bal | pw
 # record: f_id | s_id | money | bill_no | type
 # investment: id | year | rate | money
@@ -27,9 +29,9 @@ def create():
     # cur.execute("INSERT INTO record(f_id, s_id,money, type, bill_no) VALUES(?,?,?,?,?)", (1, 2, 100, "transfer",str(time.time()).replace(".", "-")))
     # cur.execute("INSERT INTO record(f_id, money, type, bill_no) VALUES(?,?,?,?)", (2,  100, "withdraw",str(time.time()).replace(".", "-")))
     # cur.execute("INSERT INTO record(f_id,  money, type, bill_no) VALUES(?,?,?,?)", (1, 200, "Deposit",str(time.time()).replace(".", "-")))
-    cur.execute("INSERT INTO record(f_id,  money, type, bill_no) VALUES(?,?,?,?)", (10, 2000, "Investment",str(time.time()).replace(".", "-")))
+    cur.execute("INSERT INTO record(f_id,  money, type, bill_no) VALUES(?,?,?,?)",
+                (10, 2000, "Investment", str(time.time()).replace(".", "-")))
 
     con.commit()
     cur.close()
     con.close()
-
