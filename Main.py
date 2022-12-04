@@ -44,35 +44,25 @@ class Bank:
         self.frame.pack()
 
     def regisiter(self):
-        # self.frame = Frame(self.root, bg="#728B8E", width=800, height=400)
-        # root.geometry("800x400")
-        # self.userlabel = Label(self.frame, text="Account Name", bg="#728B8E", fg="white", font=ARIAL)#这里重构一下文字
+        self.userlabel = Label(self.frame, text="Account Name", bg="#e5d4cd", fg="#b59283", font=ARIAL)#这里重构一下文字
+        self.userlabel.place(x=205, y=60, width=120, height=20)
+        self.button.destroy()
+        self.button1.destroy()
         def regisiter1():
             a = self.uentry.get()
             b = self.pentry.get()
-            print(a)
+            print(a)#测试用
 
-            # self.conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
-            #              VALUES (?,123,0,? )", (a, b))
-            # self.conn.commit()
-            # messagebox._show("sucessful")#这里加一个成功提示
-
+            self.conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
+                          VALUES (?,123,0,? )", (a, b))#acc_no 手动设置
+            self.conn.commit()#不要随意commit用户注册数据
+            messagebox._show("Login Info", "sucessful")  # 成功提示栏
+            self.header.destroy()
+            self.frame.destroy()
+            self.__init__(root)
         self.button3 = Button(self.frame, text="ok", bg="#b59283", fg="white", font=ARIAL, command=regisiter1)
-        self.button3.place(x=155, y=230, width=120, height=40)
+        self.button3.place(x=200, y=230, width=120, height=40)
 
-        # self.frame.pack()
-
-        # self.label=Lable
-        # count_name = E1.get()
-        # count_password = (E2.get())
-        # print(count_name)
-        # print(count_password)
-        # print(type(count_name))
-        # print(type(count_password))
-        #
-        # conn.execute("INSERT INTO account (name,acc_no,bal,pw) \
-        #             VALUES (?,11,0,? )", (count_name, count_password))
-        # conn.commit()
 
     def database_fetch(self):  # Fetching Account data from database
         self.acc_list = []

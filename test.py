@@ -1,7 +1,5 @@
 import sqlite3
 
-print()
-
-x = {"1":2}
-for i in x.keys():
-    print(i)
+con=sqlite3.connect("ATM.db")
+out=con.execute("select * from account")
+print(out)
