@@ -272,15 +272,15 @@ class Bank:
                 if x > 0:
                     time = x
                     money_ = 1000 * x
-                    terminal.append({'id': 1, 't': time, 'rate': 1.2, 'money': money_})
-                elif s > 0:
+                    terminal.append({'id': 0, 't': time, 'rate': 1.2, 'money': money_})
+                if s > 0:
                     time = s
                     money_ = 1750 * s
-                    terminal.append({'id': 2, 't': time, 'rate': 1.4, 'money': money_})
-                elif l > 0:
+                    terminal.append({'id': 1, 't': time, 'rate': 1.4, 'money': money_})
+                if l > 0:
                     time = l
                     money_ = 2500 * l
-                    terminal.append({'id': 3, 't': time, 'rate': 1.6, 'money': money_})
+                    terminal.append({'id': 2, 't': time, 'rate': 1.6, 'money': money_})
                 Label(top, text="Purchase completed!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=120, y=80, width=150, height=200)
                 Label(top, text="Investment product you have:", font=("Times",15,"bold"),bg="#e5d4cd").place(x=120, y=110, width=150, height=200)
 
@@ -295,9 +295,9 @@ class Bank:
                 tree.heading("rate", text="rate")
                 tree.heading("money", text="money")
 
+                counter = 0
                 for i in terminal:
-                    counter = 0
-                    tree.insert("", counter, text="line1",
+                    tree.insert("", counter, text="line%s"%counter,
                                 values=(i.get('id'), i.get('t'), i.get('rate'), i.get('money')))  # #给第0行添加数据，索引值可重复
                     counter += 1
                 tree.pack()
@@ -305,11 +305,11 @@ class Bank:
                 self.conn.execute("update account set bal = bal - ? where acc_no = ?", (payment, self.ac))
                 self.conn.commit()
             elif self.money <= 0:
-                Label(top, text="There is no balance in your account!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=100, y=100, width=240, height=200)
+                Label(top, text="There is no balance in your account!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=100, y=100, width=280, height=200)
             elif self.money < payment:
-                Label(top, text="Insufficient account balance!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=100, y=100, width=200, height=200)
+                Label(top, text="Insufficient account balance!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=100, y=100, width=280, height=200)
         else:
-            Label(top, text="Incorrect input of investment prduct shares!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=100, y=100, width=250, height=200)
+            Label(top, text="Incorrect input of investment prduct shares!", font=("Times",15,"bold"),bg="#e5d4cd").place(x=100, y=100, width=280, height=200)
 
     def deposit_money(self):
         temp = self.withdraw_deposit("deposit")
