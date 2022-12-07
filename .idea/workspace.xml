@@ -22,14 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="pass">
-      <change beforePath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_11_30_19_22____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_11_30_19_22____.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_0_33____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_0_33____.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_23_05____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_23_05____.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_2_58____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_2_58____.xml" afterDir="false" />
+    <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="commit by franklif&#10;删掉原来注释">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATM.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +239,7 @@
       <workItem from="1670035309857" duration="3075000" />
       <workItem from="1670044636614" duration="1242000" />
       <workItem from="1670074732590" duration="2678000" />
-      <workItem from="1670407158073" duration="1253000" />
+      <workItem from="1670407158073" duration="4181000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669627893933</created>
@@ -316,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669879625000</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="commit by franklif&#10;删掉原来注释">
+      <created>1670420536896</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670420536896</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,13 +343,8 @@
     <MESSAGE value="readme.md已提交新的数据库格式  &#10;test.py可以输出当前的数据库所有内容" />
     <MESSAGE value="pass" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="573" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1670334603408">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="573" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1670334603408" />
+    <MESSAGE value="commit by franklif&#10;删掉原来注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit by franklif&#10;删掉原来注释" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATMTest$create.coverage" NAME="create 覆盖结果" MODIFIED="1669732677117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
