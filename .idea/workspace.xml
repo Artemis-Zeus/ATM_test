@@ -25,13 +25,11 @@
     <list default="true" id="003f731d-a56d-4365-9540-121e807d280e" name="变更" comment="pass">
       <change beforePath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Banking_Project-ATM--master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_11_28_17_31____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_11_28_17_31____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_11_30_19_22____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_11_30_19_22____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_0_33____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_0_33____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_23_05____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_23_05____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_2_58____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_2_2_58____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATM.db" beforeDir="false" afterPath="$PROJECT_DIR$/ATM.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +63,7 @@
   </component>
   <component name="ProjectId" id="2I7axg76IQL6zN6pfQNziU0Wgb7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -81,6 +80,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
@@ -201,8 +201,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Main" />
       <item itemvalue="Python.show_db" />
+      <item itemvalue="Python.Main" />
       <item itemvalue="Python.create" />
       <item itemvalue="Python.show_db (1)" />
       <item itemvalue="Python.test (1)" />
@@ -244,6 +244,7 @@
       <workItem from="1670035309857" duration="3075000" />
       <workItem from="1670044636614" duration="1242000" />
       <workItem from="1670074732590" duration="2678000" />
+      <workItem from="1670407158073" duration="1253000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669627893933</created>
@@ -331,7 +332,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -348,5 +348,19 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="573" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1670334603408" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ATMTest$create.coverage" NAME="create 覆盖结果" MODIFIED="1669732677117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$show_db__1_.coverage" NAME="show_db (1) 覆盖结果" MODIFIED="1670001934073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$use_db.coverage" NAME="use_db 覆盖结果" MODIFIED="1669912872258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATMTest$Main.coverage" NAME="Main 覆盖结果" MODIFIED="1670079951983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Banking_Project_ATM__master$Main.coverage" NAME="Main 覆盖结果" MODIFIED="1669629693693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$Main.coverage" NAME="Main 覆盖结果" MODIFIED="1669878069310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$create.coverage" NAME="create 覆盖结果" MODIFIED="1669824004599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Banking_Project_ATM__master$test.coverage" NAME="test 覆盖结果" MODIFIED="1669629823328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Banking_Project_ATM__master$create.coverage" NAME="create 覆盖结果" MODIFIED="1669621990022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Banking_Project_ATM__master$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1669622278497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$test.coverage" NAME="test 覆盖结果" MODIFIED="1669876506211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM_test$test__1_.coverage" NAME="test (1) 覆盖结果" MODIFIED="1669919827382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

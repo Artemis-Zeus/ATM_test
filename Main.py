@@ -1,6 +1,5 @@
 # jeddy 、Sakura、Franklif、Artemis、Xylophone、jyf、recomoonmoon加入
 # Bank ATM
-# Account Number : 10 ------------ Password : trial
 
 from tkinter import *
 from tkinter import messagebox
